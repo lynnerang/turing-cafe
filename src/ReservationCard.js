@@ -6,16 +6,16 @@ const ReservationCard = props => {
       <h2 className="card-title">
         {props.details.name}
       </h2>
-      <p className="reservation-detail">
+      <p className="card-detail">
         Date: {props.details.date}
       </p>
-      <p className="reservation-detail">
+      <p className="card-detail">
         Time: {props.details.time}
       </p>
-      <p className="reservation-detail">
+      <p className="card-detail">
         Number of guests: {props.details.number}
       </p>
-      <button type="button">Cancel</button>
+      <button type="button" className="cancel-btn">Cancel</button>
     </article>
   );
 }
