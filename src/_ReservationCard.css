@@ -1,0 +1,15 @@
+.ReservationCard {
+  background: white;
+  border: 5px solid teal;
+  color: teal;
+  border-radius: 15px;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  margin: 10px;
+}
+
+.card-title {
+  margin: 
+}
