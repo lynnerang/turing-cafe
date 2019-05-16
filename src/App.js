@@ -29,15 +29,16 @@ class App extends Component {
   };
   
   cancelReservation = id => {
-    console.log(id)
-    fetch(`http://localhost:3001/api/v1/reservations/${id}`)
+    fetch(`http://localhost:3001/api/v1/reservations/${id}`, {
+      method: 'DELETE'
+    })
       .then(response => response.json())
-      .then(res => console.log(res))
       .then(reservations => this.setState({ reservations }))
       .catch(err => console.log(err))
   }
 
-	render() {
+  render() {
+    console.log(this.state.reservations)
 		return (
 			<div className="App">
 				<h1 className="app-title">Turing Cafe Reservations</h1>
