@@ -11,11 +11,21 @@ class App extends Component {
 	componentDidMount() {
 		fetch('http://localhost:3001/api/v1/reservations')
 			.then(response => response.json())
-			.then(reservations => this.setState({ reservations }));
+      .then(reservations => this.setState({ reservations }))
+      .catch(err => console.log(err))
 	}
 
-	addReservation = details => {
-		this.setState({ reservations: [ ...this.state.reservations, details ] });
+  addReservation = details => {
+    fetch('http://localhost:3001/api/v1/reservations', {
+      method: 'POST',
+      body: JSON.stringify(details),
+      headers: { 'Content-Type': 'application/json' }
+    })
+      .then(response => response.json())
+      .then(result => this.setState({
+        reservations: [...this.state.reservations, result]
+      }))
+      .catch(err => console.log(err))
 	};
 
 	render() {
