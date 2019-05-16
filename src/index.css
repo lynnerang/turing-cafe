@@ -1,3 +1,14 @@
+@import './_ReservationContainer.css';
+@import './_ReservationCard.css';
+@import './_ReservationForm.css';
+@import '/App.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
