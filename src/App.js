@@ -26,7 +26,16 @@ class App extends Component {
         reservations: [...this.state.reservations, result]
       }))
       .catch(err => console.log(err))
-	};
+  };
+  
+  cancelReservation = id => {
+    console.log(id)
+    fetch(`http://localhost:3001/api/v1/reservations/${id}`)
+      .then(response => response.json())
+      .then(res => console.log(res))
+      .then(reservations => this.setState({ reservations }))
+      .catch(err => console.log(err))
+  }
 
 	render() {
 		return (
@@ -36,7 +45,7 @@ class App extends Component {
 					<ReservationForm addReservation={this.addReservation} />
 				</div>
 				<div className="resy-container">
-					<ReservationContainer reservations={this.state.reservations} />
+          <ReservationContainer reservations={this.state.reservations} cancelReservation={this.cancelReservation} />
 				</div>
 			</div>
 		);

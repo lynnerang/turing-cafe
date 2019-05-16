@@ -3,7 +3,7 @@ import ReservationCard from './ReservationCard';
 
 const ReservationContainer = props => {
   const reservations = props.reservations.map(res => {
-    return <ReservationCard key={res.id} details={res} />
+    return <ReservationCard cancelReservation={props.cancelReservation} key={res.id} details={res} />
   })
     return (
       <section className="ReservationContainer">

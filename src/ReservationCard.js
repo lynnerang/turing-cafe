@@ -15,7 +15,7 @@ const ReservationCard = props => {
       <p className="card-detail">
         Number of guests: {props.details.number}
       </p>
-      <button type="button" className="cancel-btn">Cancel</button>
+      <button type="button" className="cancel-btn" onClick={() => props.cancelReservation(props.details.id)}>Cancel</button>
     </article>
   );
 }
