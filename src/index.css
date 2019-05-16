@@ -1,5 +1,7 @@
 @import './_ReservationContainer.css';
 @import './_ReservationCard.css';
+@import './_ReservationForm.css';
+@import '/App.css';
 
 * {
   box-sizing: border-box;

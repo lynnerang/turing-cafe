@@ -21,11 +21,5 @@
 }
 
 .cancel-btn {
-  height: 30px;
-  width: 200px;
-  background: teal;
-  color: white;
-  font-size: 16px;
-  margin: 10px;
   border: none;
 }

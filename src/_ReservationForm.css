@@ -1,0 +1,12 @@
+.ReservationForm {
+  display: flex;
+  align-items: center;
+}
+
+.detail-input {
+  height: 30px;
+  width: 200px;
+  margin: 30px;
+  font-size: 16px;
+  padding-left: 5px;
+}

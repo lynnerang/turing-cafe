@@ -18,3 +18,17 @@
   font-family: 'Pacifico', cursive;
   font-size: 50px;
 }
+
+button {
+  height: 30px;
+  width: 200px;
+  background: teal;
+  color: white;
+  font-size: 16px;
+  margin: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: rgb(47, 191, 191);
+}

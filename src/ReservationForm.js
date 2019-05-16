@@ -22,13 +22,13 @@ class ReservationForm extends Component {
 
   render() {
     return (
-      <section>
+      <form className="ReservationForm">
         <input name="name" placeholder="Name" className="detail-input" onChange={this.handleChange}></input>
         <input name="date" placeholder="Date (mm/dd)" className="detail-input" onChange={this.handleChange}></input>
         <input name="time" placeholder="Time" className="detail-input" onChange={this.handleChange}></input>
         <input name="number" placeholder="Number of guests" type="number" className="detail-input" onChange={this.handleChange}></input>
         <button type="button" className="add-btn" onClick={this.handleSubmit}>Make Reservation</button>
-      </section>
+      </form>
     );
   }
 }
